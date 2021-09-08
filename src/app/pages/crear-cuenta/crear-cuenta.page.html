@@ -14,6 +14,7 @@
     <small *ngIf="firstFormGroup.get('firstCtrl').hasError('required')">No puede estar vacio po pao</small>
     <small *ngIf="firstFormGroup.get('firstCtrl').hasError('minlength')">Debe de ser minimo 2 caracteres</small>
     <button type="submit"> si</button>
+    <button type="button" (click)="clean()"> clin</button>
   </form>
 
   

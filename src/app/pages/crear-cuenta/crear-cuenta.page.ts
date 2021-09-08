@@ -54,4 +54,12 @@ export class CrearCuentaPage implements OnInit {
     
   }
   
+    clean(){
+      this.firstFormGroup.patchValue({
+        firstCtrl:''
+
+
+      })
+
+    }
 }
