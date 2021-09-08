@@ -7,15 +7,61 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="fondo">
   
-  <form *ngIf="firstFormGroup" action="" [formGroup]="firstFormGroup" (ngSubmit)="onSubmit()">
-    <input type="text" name="" id="" formControlName="firstCtrl" [ngClass]="{'is-invalid':firstFormGroup.get('firstCtrl').errors}" >
-    <small *ngIf="firstFormGroup.get('firstCtrl').hasError('required')">No puede estar vacio po pao</small>
-    <small *ngIf="firstFormGroup.get('firstCtrl').hasError('minlength')">Debe de ser minimo 2 caracteres</small>
-    <button type="submit"> si</button>
-    <button type="button" (click)="clean()"> clin</button>
+  
+  <form *ngIf="firstFormGroup" action="" [formGroup]="firstFormGroup" (ngSubmit)="onSubmit()" >
+    <h1>Creacion de cuenta</h1>
+    <div>
+      <label for="usuario">Ingrese nombre de usuario:</label>
+      <input type="text" name="usuario" id="usuario" formControlName="firstCtrl"
+        [ngClass]="{'is-invalid':firstFormGroup.get('firstCtrl').errors}">
+      <small *ngIf="firstFormGroup.get('firstCtrl').hasError('required')">Este campo no puede estar vacio</small>
+      <small *ngIf="firstFormGroup.get('firstCtrl').hasError('minlength')">Debe de ser minimo 2 caracteres</small>
+    </div>
+
+    <div>
+      <label for="alias">Ingrese su alias:</label>
+      <input type="text" name="alias" id="alias" formControlName="alias"
+        [ngClass]="{'is-invalid':firstFormGroup.get('alias').errors}">
+      <small *ngIf="firstFormGroup.get('alias').hasError('required')">Este campo no puede estar vacio</small>
+      <small *ngIf="firstFormGroup.get('alias').hasError('minlength')">Debe de ser minimo 2 caracteres</small>
+    </div>
+
+
+    <div>
+      <label for="password">Ingrese su contraseña:</label>
+      <input type="text" name="password" id="password" formControlName="password"
+        [ngClass]="{'is-invalid':firstFormGroup.get('password').errors}">
+      <small *ngIf="firstFormGroup.get('password').hasError('required')">Este campo no puede estar vacio</small>
+      <small *ngIf="firstFormGroup.get('password').hasError('minlength')">Debe de ser minimo 8 caracteres</small>
+      <small *ngIf="firstFormGroup.get('password').hasError('minlength')">Debe de ser maximo 12 caracteres</small>
+    </div>
+
+
+    <div>
+      <label for="password_c">Confirmacion de contraseña:</label>
+      <input type="text" name="password_c" id="password_c" formControlName="password_c"
+        [ngClass]="{'is-invalid':firstFormGroup.get('password_c').errors}">
+      <small *ngIf="firstFormGroup.get('password_c').hasError('required')">Este campo no puede estar vacio</small>
+      <small *ngIf="firstFormGroup.get('password_c').hasError('minlength')">Debe de ser minimo 8 caracteres</small>
+      <small *ngIf="firstFormGroup.get('password_c').hasError('maxlength')">Debe de ser maximo 12 caracteres</small>
+    </div>
+
+
+    <div>
+      <label for="email">Ingrese su correo electronico:</label>
+      <input type="email" name="email" id="email" formControlName="email"
+        [ngClass]="{'is-invalid':firstFormGroup.get('email').errors}" required>
+      <small *ngIf="firstFormGroup.get('email').hasError('required')">Este campo no puede estar vacio</small>
+    </div>
+
+
+
+    <button type="submit">Crear Cuenta ! :D</button>
+    <button type="button" (click)="clean()">Limpiar todos los campos</button>
+    <a [routerLink]="['/login']">Volver al login</a>
   </form>
 
-  
+
 </ion-content>

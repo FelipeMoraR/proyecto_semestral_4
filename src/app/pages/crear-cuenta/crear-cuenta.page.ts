@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear-cuenta',
@@ -10,11 +11,11 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class CrearCuentaPage implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
+  
   
   
 
-  constructor(public alertController: AlertController,private _formBuilder: FormBuilder) { 
+  constructor(public alertController: AlertController,private _formBuilder: FormBuilder,private router:Router) { 
     
   }
   
@@ -27,11 +28,13 @@ export class CrearCuentaPage implements OnInit {
 
   ngOnInit() { 
     this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', [Validators.required,Validators.minLength(2)]]
+      firstCtrl: ['', [Validators.required,Validators.minLength(2)]],
+      alias: ['', [Validators.required,Validators.minLength(2)]],
+      password: ['', [Validators.required,Validators.minLength(8),Validators.maxLength(12)]],
+      password_c: ['', [Validators.required,Validators.minLength(8),Validators.maxLength(12)]],
+      email: ['', [Validators.required]],
     });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
+    
   }
 
 
@@ -39,6 +42,14 @@ export class CrearCuentaPage implements OnInit {
     
     if(!this.firstFormGroup.valid){
       console.log("Tu formulario es invalido")
+      const alert = await this.alertController.create({
+        header: "Formulario invalido",
+        message: "Rellene de manera apropiada todos los campos",
+        buttons: ["OK"]
+      });
+      await alert.present()
+      let result = await alert.onDidDismiss();
+      console.log(result);
       return;
       
       
@@ -51,12 +62,17 @@ export class CrearCuentaPage implements OnInit {
     await alert.present()
     let result = await alert.onDidDismiss();
     console.log(result);
-    
+    this.router.navigate(['/login'] )
   }
   
     clean(){
       this.firstFormGroup.patchValue({
-        firstCtrl:''
+        firstCtrl:'',
+        alias:'',
+        password:'',
+        password_c:'',
+        email: ''
+
 
 
       })
