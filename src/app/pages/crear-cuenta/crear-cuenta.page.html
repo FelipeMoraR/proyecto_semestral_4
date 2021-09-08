@@ -31,7 +31,7 @@
 
     <div>
       <label for="password">Ingrese su contraseña:</label>
-      <input type="text" name="password" id="password" formControlName="password"
+      <input type="password" name="password" id="password" formControlName="password"
         [ngClass]="{'is-invalid':firstFormGroup.get('password').errors}">
       <small *ngIf="firstFormGroup.get('password').hasError('required')">Este campo no puede estar vacio</small>
       <small *ngIf="firstFormGroup.get('password').hasError('minlength')">Debe de ser minimo 8 caracteres</small>
@@ -41,7 +41,7 @@
 
     <div>
       <label for="password_c">Confirmacion de contraseña:</label>
-      <input type="text" name="password_c" id="password_c" formControlName="password_c"
+      <input type="password" name="password_c" id="password_c" formControlName="password_c"
         [ngClass]="{'is-invalid':firstFormGroup.get('password_c').errors}">
       <small *ngIf="firstFormGroup.get('password_c').hasError('required')">Este campo no puede estar vacio</small>
       <small *ngIf="firstFormGroup.get('password_c').hasError('minlength')">Debe de ser minimo 8 caracteres</small>
@@ -58,7 +58,7 @@
 
 
 
-    <button type="submit">Crear Cuenta ! :D</button>
+    <button type="submit">Crear Cuenta</button>
     <button type="button" (click)="clean()">Limpiar todos los campos</button>
     <a [routerLink]="['/login']">Volver al login</a>
   </form>

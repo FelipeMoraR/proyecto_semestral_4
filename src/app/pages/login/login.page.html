@@ -3,6 +3,7 @@
     <ion-title>Inicio sesion</ion-title>
     
   </ion-toolbar>
+  
 </ion-header>
 
 <ion-content >
@@ -21,36 +22,39 @@
 
     <ion-row>
       <ion-col size="12">
-        <ion-img src="assets/icon/gif perrigatos.gif"></ion-img>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="12">
-
-        <ion-label>Ingrese su Usuario:</ion-label>
-        <ion-input type="text"></ion-input>
-
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="12">
-
-        <ion-label>Ingrese su Contraseña:</ion-label>
-        <ion-input type="password"></ion-input>
-
+        <ion-img src="assets/icon/pngegg.png"></ion-img>
       </ion-col>
     </ion-row>
     
+    <div>
+      <ion-row>
+        <ion-col size="12">
+  
+          <ion-label>Ingrese su Usuario:</ion-label>
+          <ion-input type="text" placeholder="ingrese su nombre de usuario"></ion-input>
+  
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+  
+          <ion-label>Ingrese su Contraseña:</ion-label>
+          <ion-input type="password" placeholder="Ingrese su contraseña" style="color: black;"></ion-input>
+  
+        </ion-col>
+      </ion-row>
+    </div>
+    
+    
     <ion-row>
       <ion-col size="12">
-        <ion-button color="warning">Iniciar sesion</ion-button>
+        <ion-button color="tertiary">Iniciar sesion</ion-button>
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col size="12">
-        <ion-button color="warning" [routerLink]="['/crear-cuenta']">Crear cuenta</ion-button>
+        <ion-button color="tertiary" [routerLink]="['/crear-cuenta']">Crear cuenta</ion-button>
       </ion-col>
     </ion-row>
     

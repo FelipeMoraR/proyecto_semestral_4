@@ -31,8 +31,34 @@
 
 ion-content {
     --background: none;
-    background-image: url('/assets/icon/fondo1.jpg');
+    background-image: url('/assets/icon/fondo2.png');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+ion-toolbar {
+    --background: none;
+    background-color: rgb(116, 3, 161);
+   
+}
+ion-label{
+    color: black;
+    font-weight: 500;
+}
+label{
+    color: black;
+    font-weight: 500;
+
+}
+
+button{
+    color: white;
+    font-weight: 500;
+    background-color: rgb(116, 3, 161);
+    border-radius: 6px;
+}
+
+h1{
+    color: rgb(116, 3, 161);
 }
