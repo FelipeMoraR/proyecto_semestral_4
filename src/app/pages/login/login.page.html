@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio sesion</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+
+    <ion-row>
+      <ion-col size="12">
+        <h1>Bienvenid@ a</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <h1>PerriGatos</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-img src="assets/icon/gif perrigatos.gif"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+
+        <ion-label>Ingrese su Usuario:</ion-label>
+        <ion-input type="text"></ion-input>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+
+        <ion-label>Ingrese su Contraseña:</ion-label>
+        <ion-input type="password"></ion-input>
+
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="12">
+        <ion-button color="warning">Iniciar sesion</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-button color="warning" [routerLink]="['/crear-cuenta']">Crear cuenta</ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="12">
+        <a [routerLink]="['/recuperacion']" >¿Haz olvidado tu contraseña?</a>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

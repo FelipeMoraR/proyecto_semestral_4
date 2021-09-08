@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recuperar</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="box_title">
+
+    <ion-row>
+      <ion-col size="12">
+        <h1>Recuperacion de</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <h1>contraseña</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-grid class="box">
+    <ion-row>
+      <ion-col size="12">
+
+        <h3>Se a enviado un codigo verificador</h3>
+        <h3>al correo asignado a esta cuenta</h3>
+        
+        <form action="">
+        <ion-label>Ingrese el codigo verificador aqui:</ion-label>
+        <ion-input type="text" aria-required="true"></ion-input>
+        
+        
+
+        <ion-button color="warning" [routerLink]="['/recuperacion3']"><ion-icon name="caret-forward-outline"></ion-icon></ion-button>
+        </form>
+        
+      </ion-col>
+
+      
+    </ion-row>
+  </ion-grid>
+</ion-content>

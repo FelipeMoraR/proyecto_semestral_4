@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Creacion Cuenta</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <form *ngIf="firstFormGroup" action="" [formGroup]="firstFormGroup" (ngSubmit)="onSubmit()">
+    <input type="text" name="" id="" formControlName="firstCtrl" [ngClass]="{'is-invalid':firstFormGroup.get('firstCtrl').errors}" >
+    <small *ngIf="firstFormGroup.get('firstCtrl').hasError('required')">No puede estar vacio po pao</small>
+    <small *ngIf="firstFormGroup.get('firstCtrl').hasError('minlength')">Debe de ser minimo 2 caracteres</small>
+    <button type="submit"> si</button>
+  </form>
+
+  
+</ion-content>
