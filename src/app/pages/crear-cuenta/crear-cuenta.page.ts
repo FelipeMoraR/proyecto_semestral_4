@@ -78,4 +78,8 @@ export class CrearCuentaPage implements OnInit {
       })
 
     }
+    goHome() {
+      this.router.navigate(['/home'])
+  
+    }
 }

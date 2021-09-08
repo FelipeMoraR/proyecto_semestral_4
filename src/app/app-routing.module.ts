@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'recuperacion3',
     loadChildren: () => import('./pages/recuperacion3/recuperacion3.module').then( m => m.Recuperacion3PageModule)
+  },  {
+    path: 'seccion-perruna',
+    loadChildren: () => import('./pages/seccion-perruna/seccion-perruna.module').then( m => m.SeccionPerrunaPageModule)
   },
+
   
   
 ];

@@ -1,28 +1,66 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Home
+      Bienvenido {{user}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-slides [options]="option" class="ion-margin-top">
+    <ion-slide>
+      <ion-card>
+        <img scr="assets/icon/ga.jpg">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img scr="assets/icon/ga.jpg">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img scr="assets/icon/ga.jpg">
+      </ion-card>
+    </ion-slide>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    <ion-input [(ngModel)]="a"></ion-input>
-  </div>
+  </ion-slides>
 
-  <form action="">
-    <ion-lab>si</ion-lab>
-    <ion-input type="text" required></ion-input>
-    <ion-button color="warning"  type="submit">Crear cuenta</ion-button>
-  </form>
-  
+  <mat-card class="card" (click)="goSeccionP()">
+    <mat-card-title-group>
+      <mat-card-title>Seccion Perruna</mat-card-title>
+      <mat-card-subtitle>Productos</mat-card-subtitle>
+      <img mat-card-sm-image src="assets/icon/hu.jpg">
+    </mat-card-title-group>
+    <mat-card-content class="contenido" >
+      
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-title-group>
+      <mat-card-title>Seccion Gatuna</mat-card-title>
+      <mat-card-subtitle>Productos</mat-card-subtitle>
+      <img mat-card-sm-image src="assets/icon/hu.jpg">
+    </mat-card-title-group>
+    <mat-card-content>
+      
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-title-group>
+      <mat-card-title>Seccion Otros</mat-card-title>
+      <mat-card-subtitle>Productos</mat-card-subtitle>
+      <img mat-card-sm-image src="assets/icon/ga.jpg">
+    </mat-card-title-group>
+    <mat-card-content>
+      
+    </mat-card-content>
+  </mat-card>
+  <ion-grid>
+  <ion-footer class="footer">
+    XD
+  </ion-footer>
+</ion-grid>
 </ion-content>
