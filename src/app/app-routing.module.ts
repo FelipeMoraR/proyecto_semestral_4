@@ -38,6 +38,14 @@ const routes: Routes = [
     path: 'producto',
     loadChildren: () => import('./pages/producto/producto.module').then( m => m.ProductoPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'modificar-usuario',
+    loadChildren: () => import('./pages/modificar-usuario/modificar-usuario.module').then( m => m.ModificarUsuarioPageModule)
+  },
 
   
   

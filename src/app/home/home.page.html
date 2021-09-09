@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Bienvenido {{user}}
+      Perrigato {{user}}
     </ion-title>
   </ion-toolbar>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -9,7 +9,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-button color="tertiary" style="float: right;" [routerLink]="['/login']"><ion-icon name="log-out-outline"></ion-icon></ion-button>
+  <ion-grid   >
+  <ion-button class="iconos" color="tertiary" [routerLink]="['/login']"><ion-icon name="close" ></ion-icon></ion-button>
+  <ion-button color="tertiary" [routerLink]="['/perfil']"><ion-icon name="person-circle"></ion-icon></ion-button>
+  <ion-button color="tertiary"><ion-icon name="moon"></ion-icon></ion-button>
+</ion-grid>
     <ion-slides [options]="option" class="ion-margin-top">
     <ion-slide>
       <ion-card>
@@ -62,8 +66,6 @@
     </mat-card-content>
   </mat-card>
   <ion-grid>
-  <ion-footer class="footer">
-    XD
-  </ion-footer>
+  
 </ion-grid>
 </ion-content>

@@ -12,16 +12,7 @@
   <ion-grid size="6">
     <img class="img" src="assets/icon/ga.jpg">
   </ion-grid>
-  <ion-grid size="6">
-    <!-- seccion comentarios -->
-
-    <!-- <ion-chip>
-  <ion-avatar>
-    <img src="assets/icon/ga.jpg">
-  </ion-avatar>
-  <ion-label>pepito</ion-label>
-</ion-chip> -->
-</ion-grid>
+  
 <ion-grid class="tabla" size="6">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -49,30 +40,53 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </ion-grid>
-
+<!-- comentarios de uno -->
   <ion-grid>
-    <ion-item>
-      <ion-avatar>
-        <img src="assets/icon/ga.jpg">
-      </ion-avatar>
-      <ion-label>Nicolipe: </ion-label>
-      <ion-textarea></ion-textarea>
-      <ion-button color="danger">Publicar</ion-button>
-    </ion-item>
+  <ion-grid>
+    <mat-card class="comentarios1">
+      <mat-card-title-group>
+        <mat-card-title>{{user1}}:</mat-card-title>
+        <mat-card-subtitle>Introduce tu comentario</mat-card-subtitle>
+        <ion-avatar>
+          <img src="assets/icon/ga.jpg">
+        </ion-avatar>
+        
+      </mat-card-title-group>
+      <mat-card-content class="contenido" >
+        <ion-textarea class="micomentariocolor" placeholder="....."></ion-textarea>
+        
+      </mat-card-content>
+      <mat-card-content>
+
+        <button mat-stroked-button color="primary">Publicar</button>
+      </mat-card-content>
+    </mat-card>
   </ion-grid>
-
+  <!-- comentarios de otro -->
+</ion-grid>
   <ion-grid>
-    <mat-card class="card" (click)="goSeccionP()">
+    <mat-card class="comentarios">
       <mat-card-title-group>
         <mat-card-title>Hater</mat-card-title>
         <mat-card-subtitle>hace 10 minutos</mat-card-subtitle>
         <ion-avatar>
           <img src="assets/icon/ga.jpg">
         </ion-avatar>
+        
       </mat-card-title-group>
       <mat-card-content class="contenido" >Muy malo xd
+        
+        
+      </mat-card-content>
+      <mat-card-content>
+        <h1 class="letra">150<button  mat-icon-button  >
+          <mat-icon><ion-icon name="heart" class="iconos"></ion-icon></mat-icon>
+        </button></h1>
         
       </mat-card-content>
     </mat-card>
   </ion-grid>
+
+  
+ 
 </ion-content>

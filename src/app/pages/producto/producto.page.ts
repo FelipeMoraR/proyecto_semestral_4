@@ -19,6 +19,7 @@ const ELEMENT_DATA: Caracteristicas[] = [
 })
 export class ProductoPage implements OnInit {
 cepillo="Cepillo Bonito";
+user1="Nicolipe";
 displayedColumns: string[] = ['position', 'name', 'weight'];
 dataSource = ELEMENT_DATA;
   constructor() { }
