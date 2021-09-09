@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { SeccionPerrunaPageRoutingModule } from './seccion-perruna-routing.module';
-
+import {MatCardModule} from '@angular/material/card'; 
 import { SeccionPerrunaPage } from './seccion-perruna.page';
 
 @NgModule({
@@ -13,8 +13,9 @@ import { SeccionPerrunaPage } from './seccion-perruna.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    SeccionPerrunaPageRoutingModule
+    SeccionPerrunaPageRoutingModule,
+    MatCardModule
   ],
   declarations: [SeccionPerrunaPage]
 })
-export class SeccionPerrunaPageModule {}
+export class SeccionPerrunaPageModule { }

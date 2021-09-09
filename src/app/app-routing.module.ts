@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'seccion-perruna',
     loadChildren: () => import('./pages/seccion-perruna/seccion-perruna.module').then( m => m.SeccionPerrunaPageModule)
   },
+  {
+    path: 'producto',
+    loadChildren: () => import('./pages/producto/producto.module').then( m => m.ProductoPageModule)
+  },
 
   
   

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seccion-perruna',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeccionPerrunaPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  goProducto(){
+    this.router.navigate(['/producto'])
+  }
 }
