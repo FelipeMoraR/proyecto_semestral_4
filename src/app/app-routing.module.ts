@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'modificar-usuario',
     loadChildren: () => import('./pages/modificar-usuario/modificar-usuario.module').then( m => m.ModificarUsuarioPageModule)
   },
+  {
+    path: 'mod-contrasena',
+    loadChildren: () => import('./pages/mod-contrasena/mod-contrasena.module').then( m => m.ModContrasenaPageModule)
+  },
 
   
   

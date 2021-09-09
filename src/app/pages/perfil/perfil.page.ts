@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilPage implements OnInit {
 user="Nicolipe"
+email="perrigato@xd.com"
   constructor() { }
 
   ngOnInit() {

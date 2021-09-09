@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modificar </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <img src="assets/icon/CUIDAO.png">
+  <div class="grid">
+    <ion-label>
+      Introdusca su nueva contraseña:
+    </ion-label>
+    <ion-input placeholder="Nuevo contraseña" style="color: rgb(56, 55, 55);"></ion-input>
+    <ion-input placeholder="confirme su contraseña" style="color: rgb(56, 55, 55);"></ion-input>
+    <button mat-stroked-button color="primary" [routerLink]="['/perfil']" class="boton">Modificar contraseña</button>
+  </div>
+  </ion-content>
+</ion-content>

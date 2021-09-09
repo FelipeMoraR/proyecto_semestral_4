@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-
+import { MatButtonModule } from '@angular/material/button';
 import { ModificarUsuarioPageRoutingModule } from './modificar-usuario-routing.module';
 
 import { ModificarUsuarioPage } from './modificar-usuario.page';
@@ -13,7 +13,8 @@ import { ModificarUsuarioPage } from './modificar-usuario.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ModificarUsuarioPageRoutingModule
+    ModificarUsuarioPageRoutingModule,
+    MatButtonModule
   ],
   declarations: [ModificarUsuarioPage]
 })
