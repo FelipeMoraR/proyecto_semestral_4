@@ -5,7 +5,9 @@
     position: relative;
     border-radius: 3px;
     margin-top: 20px;
-    margin-left: 60px;
+    margin-left: 65px;
+    border: 1px solid rgb(227, 250, 125);
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
 }
 
 .img:hover{
@@ -15,4 +17,24 @@
 .probando{
     color: aqua;
 }
+ 
+
+.tabla{
+    margin-left: 38px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+   
+    transition: all 300ms;
+    position: relative;
     
+}
+
+.tabla:hover{
+    transform: scale(1.2);
+}
+.letra{
+    font-size: 15px;
+    margin-left: 10px;
+    
+
+}
