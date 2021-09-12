@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-seccion-perruna',
@@ -8,12 +8,25 @@ import { Router } from '@angular/router';
 })
 export class SeccionPerrunaPage implements OnInit {
 
-  constructor(private router: Router) { }
+  data: any;
+ 
+  constructor(private activeroute: ActivatedRoute, private router: Router) {
+    this.activeroute.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.data = this.router.getCurrentNavigation().extras.state.user;
+        console.log(this.data)
+
+      }
+});
+}
 
   ngOnInit() {
   }
 
   goProducto(){
-    this.router.navigate(['/producto'])
+    let navigationExtras: NavigationExtras = {
+      state: {user: this.data}
+      };
+    this.router.navigate(['/producto'],navigationExtras)
   }
 }

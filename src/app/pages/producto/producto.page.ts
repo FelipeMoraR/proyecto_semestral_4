@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 export interface Caracteristicas {
   name: string;
@@ -19,10 +20,21 @@ const ELEMENT_DATA: Caracteristicas[] = [
 })
 export class ProductoPage implements OnInit {
 cepillo="Cepillo Bonito";
-user1="Nicolipe";
+
 displayedColumns: string[] = ['position', 'name', 'weight'];
 dataSource = ELEMENT_DATA;
-  constructor() { }
+  
+data: any;
+
+constructor(private activeroute: ActivatedRoute, private router: Router) {
+  this.activeroute.queryParams.subscribe(params => {
+    if (this.router.getCurrentNavigation().extras.state) {
+      this.data = this.router.getCurrentNavigation().extras.state.user;
+      console.log(this.data)
+    }
+});
+}
+
 
   ngOnInit() {
   }

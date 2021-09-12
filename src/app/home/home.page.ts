@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router ,NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,19 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  a = "ahira su";
-  user = "Nicolipe"
-  constructor(private router: Router) { }
+  
+  data: any;
+ 
+  constructor(private activeroute: ActivatedRoute, private router: Router) {
+    this.activeroute.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.data = this.router.getCurrentNavigation().extras.state.user;
+        console.log(this.data)
+
+      }
+});
+}
+
 
   option = {
     sliderPerView: 1,
@@ -20,7 +30,10 @@ export class HomePage {
   }
 
   goSeccionP() {
-    this.router.navigate(['/seccion-perruna'])
+    let navigationExtras: NavigationExtras = {
+      state: {user: this.data}
+      };
+    this.router.navigate(['/seccion-perruna'],navigationExtras)
 
   }
 }
