@@ -9,11 +9,15 @@
 
 <ion-content>
   <img src="assets/icon/bannersxd.png">
-<div class="grid">
-  <ion-label>
-    Introdusca su nuevo nombre de usuario:
-  </ion-label>
-  <ion-input placeholder="Nuevo usuario" style="color: rgb(56, 55, 55);"></ion-input>
-  <button mat-stroked-button color="primary" [routerLink]="['/perfil']" class="boton">Modificar usuario</button>
-</div>
+<form *ngIf="formulario_us" action="" [formGroup]="formulario_us" (ngSubmit)="modificar()">
+  <div>
+    <label for="usuario">Ingrese nombre de usuario:</label>
+    <input type="text" name="usuario" id="usuario" formControlName="mod_us"
+      [ngClass]="{'is-invalid':formulario_us.get('mod_us').errors}" placeholder="Nuevo usuario">
+    <small *ngIf="formulario_us.get('mod_us').hasError('required')">Este campo no puede estar vacio</small>
+
+    <button type="submit">Modificar Usuario</button>
+    
+  </div>
+</form>
 </ion-content>

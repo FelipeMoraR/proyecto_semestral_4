@@ -10,13 +10,27 @@
 <ion-content>
   <ion-content>
     <img src="assets/icon/bannersxd.png">
-  <div class="grid">
-    <ion-label>
-      Introdusca su nueva contraseña:
-    </ion-label>
-    <ion-input placeholder="Nuevo contraseña" style="color: rgb(56, 55, 55);"></ion-input>
-    <ion-input placeholder="confirme su contraseña" style="color: rgb(56, 55, 55);"></ion-input>
-    <button mat-stroked-button color="primary" [routerLink]="['/perfil']" class="boton">Modificar contraseña</button>
-  </div>
+    <form *ngIf="formulario_con" action="" [formGroup]="formulario_con" (ngSubmit)="modificarUs()">
+      <div>
+        <label for="contraseña">Ingrese Nueva contraseña:</label>
+        <input type="password" name="contraseña" id="contraseña" formControlName="mod_contra"
+          [ngClass]="{'is-invalid':formulario_con.get('mod_contra').errors}" placeholder="Nueva contraseña">
+        <small *ngIf="formulario_con.get('mod_contra').hasError('required')">Este campo no puede estar vacio</small>
+
+        
+
+      </div>
+      
+      <div>
+        <label for="contraseña2">Ingrese nombre de usuario:</label>
+        <input type="password" name="contraseña2" id="contraseña2" formControlName="mod_contra2"
+          [ngClass]="{'is-invalid':formulario_con.get('mod_contra2').errors}" placeholder="Confirme contraseña">
+        <small *ngIf="formulario_con.get('mod_contra2').hasError('required')">Este campo no puede estar vacio</small>
+
+        
+
+      </div>
+      <button type="submit">Modificar Contraseña</button>
+    </form>
   </ion-content>
 </ion-content>

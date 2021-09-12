@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage implements OnInit {
-user="Nicolipe"
+
 email="perrigato@xd.com"
-  constructor() { }
+data: any;
+
+constructor(private activeroute: ActivatedRoute, private router: Router) {
+  this.activeroute.queryParams.subscribe(params => {
+    if (this.router.getCurrentNavigation().extras.state) {
+      this.data = this.router.getCurrentNavigation().extras.state.user;
+      console.log(this.data)
+    }
+});
+}
 
   ngOnInit() {
   }

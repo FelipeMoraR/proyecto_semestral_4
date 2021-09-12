@@ -15,11 +15,13 @@ a{
 
 small{
     display: block;
+    color: yellow;
 }
 
 input{
     display: block;
-    
+    background-color: grey;
+    color: black;
     width: 100%;
 }
 
@@ -46,9 +48,5 @@ label{
     color: white;
 }
 
-small{
-    color: yellow;
-    
-}
 
 

@@ -36,4 +36,12 @@ export class HomePage {
     this.router.navigate(['/seccion-perruna'],navigationExtras)
 
   }
+
+  goPerfil() {
+    let navigationExtras: NavigationExtras = {
+      state: {user: this.data}
+      };
+    this.router.navigate(['/perfil'],navigationExtras)
+
+  }
 }

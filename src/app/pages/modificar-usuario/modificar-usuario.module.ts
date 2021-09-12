@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+
 
 import { IonicModule } from '@ionic/angular';
 import { MatButtonModule } from '@angular/material/button';
 import { ModificarUsuarioPageRoutingModule } from './modificar-usuario-routing.module';
 
 import { ModificarUsuarioPage } from './modificar-usuario.page';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { ModificarUsuarioPage } from './modificar-usuario.page';
     FormsModule,
     IonicModule,
     ModificarUsuarioPageRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   declarations: [ModificarUsuarioPage]
 })

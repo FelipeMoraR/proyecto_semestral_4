@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+
 import { MatButtonModule } from '@angular/material/button';
 import { IonicModule } from '@ionic/angular';
 
 import { ModContrasenaPageRoutingModule } from './mod-contrasena-routing.module';
 
 import { ModContrasenaPage } from './mod-contrasena.page';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 
 @NgModule({
   imports: [
@@ -14,7 +15,9 @@ import { ModContrasenaPage } from './mod-contrasena.page';
     FormsModule,
     IonicModule,
     ModContrasenaPageRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
+
   ],
   declarations: [ModContrasenaPage]
 })
