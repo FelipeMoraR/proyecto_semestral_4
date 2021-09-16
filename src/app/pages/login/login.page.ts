@@ -27,8 +27,34 @@ export class LoginPage implements OnInit {
   }
 
   async validarInicio(){
-    if(this.variable1 == this.comparativa_v1 || this.variable1 == this.comparativa_v2 || this.variable1 == this.comparativa_v3 
-      && this.password1 == this.comparativa_p1 || this.password1 == this.comparativa_p2 || this.password1 == this.comparativa_p3 ){
+    if(this.variable1 == this.comparativa_v1 
+      && this.password1 == this.comparativa_p1){
+      console.log("pancito")
+      
+      let navigationExtras: NavigationExtras = {
+        state: {user: this.variable1}
+        };
+        
+        
+        this.router.navigate(['/home'],navigationExtras)
+      return
+
+    }
+    if(this.variable1 == this.comparativa_v2 
+      && this.password1 == this.comparativa_p2){
+      console.log("pancito")
+      
+      let navigationExtras: NavigationExtras = {
+        state: {user: this.variable1}
+        };
+        
+        
+        this.router.navigate(['/home'],navigationExtras)
+      return
+
+    }
+    if(this.variable1 == this.comparativa_v3 
+      && this.password1 == this.comparativa_p3){
       console.log("pancito")
       
       let navigationExtras: NavigationExtras = {
