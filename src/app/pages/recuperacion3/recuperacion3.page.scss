@@ -7,7 +7,7 @@ h1{
 
 .box{
     margin: 10px 15px 10px 15px;
-    background: linear-gradient(to bottom, rgb(116, 3, 161), white);
+    background: linear-gradient(to bottom, #E6AC39, #F28613);
     padding: 15px;
     border-radius: 6px;
     box-shadow: 5px 5px 5px rgb(58, 61, 38);
@@ -18,12 +18,13 @@ h1{
     margin-top: 80px;
 }
 
-ion-button{
+button{
     margin-left:70px;
     margin-top:15px;
+    background-color: #F2CB30 !important;
     width: 100px;
+    height: 30px;
 }
-
 ion-icon{
     width: 70px;
 }
