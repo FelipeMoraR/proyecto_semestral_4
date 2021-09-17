@@ -36,7 +36,7 @@ export class ModificarUsuarioPage implements OnInit {
       
     }
     const alert = await this.alertController.create({
-      header: "Modificacion de contraseña",
+      header: "Modificacion de Usuario",
       message: "Se a modificado el usuario correctamente",
       buttons: ["OK"]
     });

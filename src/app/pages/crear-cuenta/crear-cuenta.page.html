@@ -15,7 +15,7 @@
     <div>
       <label for="usuario">Ingrese nombre de usuario:</label>
       <input type="text" name="usuario" id="usuario" formControlName="firstCtrl"
-        [ngClass]="{'is-invalid':firstFormGroup.get('firstCtrl').errors}">
+        [ngClass]="{'is-invalid':firstFormGroup.get('firstCtrl').errors}" placeholder="ingrese nombre de usuario">
       <small *ngIf="firstFormGroup.get('firstCtrl').hasError('required')">Este campo no puede estar vacio</small>
       <small *ngIf="firstFormGroup.get('firstCtrl').hasError('minlength')">Debe de ser minimo 2 caracteres</small>
     </div>
@@ -23,7 +23,7 @@
     <div>
       <label for="alias">Ingrese su alias:</label>
       <input type="text" name="alias" id="alias" formControlName="alias"
-        [ngClass]="{'is-invalid':firstFormGroup.get('alias').errors}">
+        [ngClass]="{'is-invalid':firstFormGroup.get('alias').errors}" placeholder="ingrese su alias">
       <small *ngIf="firstFormGroup.get('alias').hasError('required')">Este campo no puede estar vacio</small>
       <small *ngIf="firstFormGroup.get('alias').hasError('minlength')">Debe de ser minimo 2 caracteres</small>
     </div>
@@ -32,7 +32,7 @@
     <div>
       <label for="password">Ingrese su contraseña:</label>
       <input type="password" name="password" id="password" formControlName="password"
-        [ngClass]="{'is-invalid':firstFormGroup.get('password').errors}">
+        [ngClass]="{'is-invalid':firstFormGroup.get('password').errors}" placeholder="ingrese su contraseña">
       <small *ngIf="firstFormGroup.get('password').hasError('required')">Este campo no puede estar vacio</small>
       <small *ngIf="firstFormGroup.get('password').hasError('minlength')">Debe de ser minimo 8 caracteres</small>
       <small *ngIf="firstFormGroup.get('password').hasError('minlength')">Debe de ser maximo 12 caracteres</small>
@@ -42,7 +42,7 @@
     <div>
       <label for="password_c">Confirmacion de contraseña:</label>
       <input type="password" name="password_c" id="password_c" formControlName="password_c"
-        [ngClass]="{'is-invalid':firstFormGroup.get('password_c').errors}">
+        [ngClass]="{'is-invalid':firstFormGroup.get('password_c').errors}" placeholder="ingrese confirmacion de contraseña">
       <small *ngIf="firstFormGroup.get('password_c').hasError('required')">Este campo no puede estar vacio</small>
       <small *ngIf="firstFormGroup.get('password_c').hasError('minlength')">Debe de ser minimo 8 caracteres</small>
       <small *ngIf="firstFormGroup.get('password_c').hasError('maxlength')">Debe de ser maximo 12 caracteres</small>
@@ -52,7 +52,7 @@
     <div>
       <label for="email">Ingrese su correo electronico:</label>
       <input type="email" name="email" id="email" formControlName="email"
-        [ngClass]="{'is-invalid':firstFormGroup.get('email').errors}" required>
+        [ngClass]="{'is-invalid':firstFormGroup.get('email').errors}" required placeholder="ingrese email">
       <small *ngIf="firstFormGroup.get('email').hasError('required')">Este campo no puede estar vacio</small>
     </div>
 
