@@ -19,9 +19,11 @@ small{
 
 input{
     display: block;
-    background-color: azure;
+    background:none;
     color: black;
     width: 100%;
+    border-radius: 30px;
+    height: 30px
 }
 
 button{

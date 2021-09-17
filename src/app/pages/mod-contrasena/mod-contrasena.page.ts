@@ -40,7 +40,7 @@ export class ModContrasenaPage implements OnInit {
     if(this.formulario_con.get('mod_contra').value == this.formulario_con.get('mod_contra2').value){
       console.log('Ta piola')
       const alert = await this.alertController.create({
-        header: "Modificacion de usuario",
+        header: "Modificacion de contraseña",
         message: "Se a modificado la contraseña correctamente",
         buttons: ["OK"]
       });
@@ -54,7 +54,7 @@ export class ModContrasenaPage implements OnInit {
 
     console.log('no ta piola')
       const alert = await this.alertController.create({
-        header: "Modificacion de usuario",
+        header: "Modificacion de contraseña",
         message: "Error al modificar contraseña , las contraseñas no concuerdan",
         buttons: ["OK"]
       });
