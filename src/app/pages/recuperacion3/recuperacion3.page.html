@@ -27,15 +27,15 @@
       <ion-col size="12">
 
         
-        <form action="">
+        
         <ion-label>Ingrese su nueva contraseña:</ion-label>
-        <ion-input type="text" aria-required="true" placeholder="Ingrese su nueva contraseña aqui"></ion-input>
+        <ion-input type="text" aria-required="true" placeholder="Ingrese su nueva contraseña aqui" [(ngModel)]="recuper1"></ion-input>
         
         <ion-label>Confirmacion de contraseña:</ion-label>
-        <ion-input type="text" aria-required="true" placeholder="Ingrese la confirmacion contraseña aqui"></ion-input>
+        <ion-input type="text" aria-required="true" placeholder="Ingrese la confirmacion contraseña aqui" [(ngModel)]="recuper2"></ion-input>
 
-        <button color="tertiary" [routerLink]="['/login']"><ion-icon name="caret-forward-outline"></ion-icon></button>
-        </form>
+        <button color="tertiary" (click)="recuperar3()"><ion-icon name="caret-forward-outline"></ion-icon></button>
+        
         
       </ion-col>
 

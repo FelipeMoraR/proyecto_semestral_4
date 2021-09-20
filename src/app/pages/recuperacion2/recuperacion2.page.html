@@ -29,14 +29,14 @@
         <h3>Se a enviado un codigo verificador</h3>
         <h3>al correo asignado a esta cuenta</h3>
         
-        <form action="">
+        
         <ion-label>Ingrese el codigo verificador aqui:</ion-label>
-        <ion-input type="text" placeholder="Ingrese el codigo verificador"></ion-input>
+        <ion-input type="text" placeholder="Ingrese el codigo verificador" [(ngModel)]="validacion2"> </ion-input>
         
         
 
-        <button [routerLink]="['/recuperacion3']"><ion-icon name="caret-forward-outline"></ion-icon></button>
-        </form>
+        <button (click)="recuperar2()"><ion-icon name="caret-forward-outline"></ion-icon></button>
+        
         
       </ion-col>
 

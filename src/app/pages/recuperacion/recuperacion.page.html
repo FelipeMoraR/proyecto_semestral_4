@@ -27,11 +27,11 @@
       <ion-col size="12">
 
         <h2>Introduce tu nombre de usuario</h2>
-
+        
         <ion-label>El que necesitas para iniciar sesion</ion-label>
-        <ion-input type="text" placeholder="Ingrese su nombre de usuario"></ion-input>
+        <ion-input type="text" placeholder="ingrese su nombre de usuario" [(ngModel)]="validacion1"></ion-input>
 
-        <button [routerLink]="['/recuperacion2']">
+        <button (click)="recuperar()">
           <ion-icon name="caret-forward-outline"></ion-icon>
         </button>
 
