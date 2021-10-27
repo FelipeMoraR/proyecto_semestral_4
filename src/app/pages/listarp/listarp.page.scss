@@ -1,0 +1,42 @@
+  
+.card {
+    max-width: 500px;
+    margin-bottom: 13px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    color: rgb(172, 166, 91);
+    background-color: rgb(226, 219, 226);
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    cursor: default;
+    transition: all 400ms ease;
+  }
+  
+.card:hover{
+    box-shadow: 5px 1px 20px rgba(0,0,0,0.4);
+    transform: translateY(-2.5%);
+}
+
+ion-select {
+  width: 100%;
+
+  justify-content: center;
+}
+ion-select::part(placeholder),
+ion-select::part(text) {
+  flex: 0 0 auto;
+}
+
+ion-select::part(placeholder) {
+  color: #20a08a;
+  opacity: 1;
+}
+
+
+ion-item{
+  background: none;
+  margin-top: 20px;
+}
+

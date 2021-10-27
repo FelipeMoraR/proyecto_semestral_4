@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listado Productos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="full">Agregar Producto</ion-button>
+  <!-- *ngFor="let x of "  AADENTRO DEL ITEM-->
+  <mat-card class="card" (click)="goProducto()">
+    <mat-card-title-group>
+      <img mat-card-sm-image src="assets/icon/capillo.png">
+      <mat-card-title> Cepillo para perros </mat-card-title>
+      <ion-select placeholder="Opciones">
+        <ion-select-option value="f"><ion-button>Eliminar</ion-button></ion-select-option>
+        <ion-select-option value="m"><ion-button>modificar</ion-button></ion-select-option>
+      </ion-select>
+    </mat-card-title-group>
+    <mat-card-content class="contenido" >
+      
+    </mat-card-content>
+  </mat-card>
+
+  <ion-item>
+    <img mat-card-sm-image src="assets/icon/capillo.png">
+    <ion-label>Nombre o ID</ion-label>
+    <ion-select placeholder="Opciones">
+      <ion-select-option value="f"><ion-button>Eliminar</ion-button></ion-select-option>
+      <ion-select-option value="m"><ion-button>modificar</ion-button></ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>ID del producto</ion-label>
+    <ion-label>Nombre Producto</ion-label>
+    <ion-button>Eli</ion-button>
+    <ion-button>Mod</ion-button>
+  </ion-item>
+
+</ion-content>

@@ -44,4 +44,9 @@ export class HomePage {
     this.router.navigate(['/perfil'],navigationExtras)
 
   }
+
+  listarP(){
+    this.router.navigate(['/listarp'])
+  
+  }
 }

@@ -50,6 +50,38 @@ const routes: Routes = [
     path: 'mod-contrasena',
     loadChildren: () => import('./pages/mod-contrasena/mod-contrasena.module').then( m => m.ModContrasenaPageModule)
   },
+  {
+    path: 'seccion-gatuna',
+    loadChildren: () => import('./pages/seccion-gatuna/seccion-gatuna.module').then( m => m.SeccionGatunaPageModule)
+  },
+  {
+    path: 'seccion-otros',
+    loadChildren: () => import('./pages/seccion-otros/seccion-otros.module').then( m => m.SeccionOtrosPageModule)
+  },
+  {
+    path: 'listarp',
+    loadChildren: () => import('./pages/listarp/listarp.module').then( m => m.ListarpPageModule)
+  },
+  {
+    path: 'agregarpro',
+    loadChildren: () => import('./pages/agregarpro/agregarpro.module').then( m => m.AgregarproPageModule)
+  },
+  {
+    path: 'listarus',
+    loadChildren: () => import('./pages/listarus/listarus.module').then( m => m.ListarusPageModule)
+  },
+  {
+    path: 'agregarus',
+    loadChildren: () => import('./pages/agregarus/agregarus.module').then( m => m.AgregarusPageModule)
+  },
+  {
+    path: 'modificarpro',
+    loadChildren: () => import('./pages/modificarpro/modificarpro.module').then( m => m.ModificarproPageModule)
+  },
+  {
+    path: 'modificarus',
+    loadChildren: () => import('./pages/modificarus/modificarus.module').then( m => m.ModificarusPageModule)
+  },
 
   
   
