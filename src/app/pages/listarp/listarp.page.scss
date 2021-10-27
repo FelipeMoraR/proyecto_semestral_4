@@ -12,6 +12,7 @@
     overflow: hidden;
     cursor: default;
     transition: all 400ms ease;
+
   }
   
 .card:hover{
@@ -20,7 +21,7 @@
 }
 
 ion-select {
-  width: 100%;
+  width: 36%;
 
   justify-content: center;
 }
@@ -36,7 +37,8 @@ ion-select::part(placeholder) {
 
 
 ion-item{
-  background: none;
+  --background: none;
   margin-top: 20px;
+  color: black;
 }
 

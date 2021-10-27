@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listarp',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarpPage implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit() {
   }
+
+
+
+
+agregarpro(){
+  this.router.navigate(['/agregarpro'])
+}
 
 }
