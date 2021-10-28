@@ -49,4 +49,12 @@ export class HomePage {
     this.router.navigate(['/listarp'])
   
   }
+
+
+  listarU(){
+    this.router.navigate(['/listarus'])
+  
+  }
+
+
 }
