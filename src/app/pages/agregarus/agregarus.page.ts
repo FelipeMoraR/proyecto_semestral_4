@@ -25,5 +25,46 @@ export class AgregarusPage implements OnInit {
     
   }
 
+  async onSubmit(){
+    
+    if(!this.firstFormGroup.valid){
+      console.log("Tu formulario es invalido")
+      const alert = await this.alertController.create({
+        header: "Formulario invalido",
+        message: "Rellene de manera apropiada todos los campos",
+        buttons: ["OK"]
+      });
+      await alert.present()
+      let result = await alert.onDidDismiss();
+      console.log(result);
+      return;
+      
+      
+    }
+    const alert = await this.alertController.create({
+      header: "Creacion de Usuario",
+      message: "Se a creado el usuario correctamente",
+      buttons: ["OK"]
+    });
+    await alert.present()
+    let result = await alert.onDidDismiss();
+    console.log(result);
+    this.router.navigate(['/home'] )
+  }
+
+  clean(){
+    this.firstFormGroup.patchValue({
+      firstCtrl:'',
+      alias:'',
+      password:'',
+      password_c:'',
+      email: '',
+      tip_usuario: ''
+
+
+
+    })
+
+  }
 
 }

@@ -57,4 +57,20 @@ export class HomePage {
   }
 
 
+  goSeccionO() {
+    let navigationExtras: NavigationExtras = {
+      state: {user: this.data}
+      };
+    this.router.navigate(['/seccion-gatuna'],navigationExtras)
+
+  }
+
+  goSeccionG() {
+    let navigationExtras: NavigationExtras = {
+      state: {user: this.data}
+      };
+    this.router.navigate(['/seccion-otros'],navigationExtras)
+
+  }
+
 }

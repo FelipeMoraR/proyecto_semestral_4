@@ -9,7 +9,7 @@
 
 <ion-content>
   <form *ngIf="firstFormGroup" action="" [formGroup]="firstFormGroup" (ngSubmit)="onSubmit()" >
-    <h1>Creacion de cuenta</h1>
+    <h1>Agregar Usuario</h1>
     <div>
       <label for="usuario">Ingrese nombre de usuario:</label>
       <input type="text" name="usuario" id="usuario" formControlName="firstCtrl"
@@ -54,11 +54,18 @@
       <small *ngIf="firstFormGroup.get('email').hasError('required')">Este campo no puede estar vacio</small>
     </div>
 
-    
+    <div>
+      <label for="tip_usuario">Ingrese el tipo de usuario: <br> </label>
+      <label for="tip_usuario">1:Cliente <br> </label>
+      <label for="tip_usuario">2:Administrador <br></label>
+      <input type="number" min="1" max="2" name="tip_usuario" id="tip_usuario" formControlName="tip_usuario"
+        [ngClass]="{'is-invalid':firstFormGroup.get('tip_usuario').errors}" required placeholder="ingrese email">
+      <small *ngIf="firstFormGroup.get('tip_usuario').hasError('required')">Este campo no puede estar vacio</small>
+    </div>
 
 
     <button type="submit">Crear Cuenta</button>
     <button type="button" (click)="clean()">Limpiar todos los campos</button>
-    <a [routerLink]="['/login']">Volver al login</a>
+    <a [routerLink]="['/home']">Volver a la pagina inicarl</a>
   </form>
 </ion-content>
